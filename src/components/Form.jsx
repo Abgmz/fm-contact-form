@@ -2,19 +2,17 @@
 import { createContext } from "react";
 import { useForm } from "../hooks/useForm";
 import SuccessMessageCard from "./SuccessMessageCard";
+import FormInside from "./FormInside";
 
 export const FormContext = createContext();
 
 export default function Form({ children }) {
-  const { success, handleSubmit } = useForm();
   return (
     <FormContext.Provider value={useForm()}>
       <div className="contact-form">
-        <SuccessMessageCard success={success} />
+        <SuccessMessageCard />
         <h1 className="contact-form_title">Contact Us</h1>
-        <form className="contact-form_controls" onSubmit={handleSubmit}>
-          {children}
-        </form>
+        <FormInside>{children}</FormInside>
       </div>
     </FormContext.Provider>
   );

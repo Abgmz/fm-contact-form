@@ -21,10 +21,10 @@ export default function FormInputRadio({ val, name, children }) {
         name={name}
         value={val}
         checked={contact[name] === val}
-        id={name}
+        id={val}
         onChange={handleInput}
       />
-      <label htmlFor={name} className="contact-form_label">
+      <label htmlFor={val} className="contact-form_label">
         {children}
       </label>
     </div>

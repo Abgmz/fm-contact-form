@@ -38,7 +38,6 @@ function App() {
         </FormInputRadios>
         <FormTextarea>Message *</FormTextarea>
         <FormCheckbox>I consent to being contacted by the team</FormCheckbox>
-        <button className="contact-form_submit">Submit</button>
       </Form>
     </main>
   );

@@ -1,7 +1,9 @@
 import check from "../assets/success-standard-svgrepo-com.svg";
-export default function SuccessMessageCard(props) {
+import { useContext } from "react";
+import { FormContext } from "./Form";
+export default function SuccessMessageCard() {
   // eslint-disable-next-line react/prop-types
-  const { success } = props;
+  const { success } = useContext(FormContext);
 
   return (
     <div className={`success-card ${success ? "active" : ""}`}>
